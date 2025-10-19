@@ -1,12 +1,17 @@
 function myMenuFunction(){
-    let menuBtn = document.getElementById("myNavMenu");
-
-    if(menuBtn.className === "nav-menu"){
-        menuBtn.className += "responsive";
+    let menu = document.getElementById("myNavMenu");
+    const overlay = document.getElementById("overlay");
+    const menuIcon = document.getElementById(".nav-menu-btn i");
+    if(menu.className === "nav-menu"){
+        menu.className += "responsive";
     }else{
-        menuBtn.className = "nav-menu";
+        menu.className = "nav-menu";
     }
+
+  menu.classList.toggle("active");
+  overlay.classList.toggle("active");
 }
+
 
 window.onscroll = function(){headerShadow()};
 
